@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/SAEAPP/">
+        <button type="submit" class="button">Album</button>
+    </form>
+
+    {% if id is not none  %}
+        <form method="post" action="/SAEAPP/updatetraitement/{{id}}/">
+    {% else %}
+        <form method="post" action="/SAEAPP/traitement/">
+    {% endif %}
+    {% csrf_token %}
+    {{ form.as_ul }}
+
+    <input type="submit" value="envoyer␣les␣données"/>
+        </form>
+    </form>
+</body>
+</html>
