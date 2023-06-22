@@ -10,9 +10,9 @@
     </form>
 
     {% if id is not none  %}
-        <form method="post" action="/SAEAPP/updatetraitement/{{id}}/">
+        <form method="post" action="/SAEAPP/appupdatetraitement/{{id}}/">
     {% else %}
-        <form method="post" action="/SAEAPP/traitement/ ">
+        <form method="post" action="/SAEAPP/apptraitement/">
     {% endif %}
     {% csrf_token %}
     {{ form.as_ul }}

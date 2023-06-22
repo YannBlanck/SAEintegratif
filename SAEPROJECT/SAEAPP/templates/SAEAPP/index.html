@@ -5,12 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<p> test mon regard</p>
-<a href="/SAEAPP/ajout"> ajouter</a>
+<p> MQTT capteur</p>
 <ol>
     {% for l in liste %}
-        <li> {{l}} <a href="/SAEAPP/affiche/{{l.id}}"> affiche </a> <a href="/SAEAPP/update/{{l.id}}"> update</a> <a href="/SAEAPP/delete/{{l.id}}"> delete</a> </li>
+        <li> {{l}} <a href="/SAEAPP/appaffiche/{{l.id}}"> timestamp </a> <a href="/SAEAPP/affiche/{{l.id}}"> affiche </a> </li>
     {% endfor %}
+
+
 </ol>
+<form action="/SAEAPP/appindex">
+    <button type="submit" class="button">Timestamp</button>
+</form>
 </body>
 </html>

@@ -13,3 +13,15 @@ class Doone(models.Model):
         return chaine
     def Doe(self):
         return{"id":self.id, "nomcapteur":self.nomcapteur, "piece":self.piece, "emplacement":self.emplacement}
+
+
+class stamp(models.Model):
+    idd = models.ForeignKey(Doone, on_delete=models.CASCADE)
+    t1 = models.DateTimeField()
+
+    def __str__(self):
+        chaine2 =f"{self.idd} {self.t1}"
+        return chaine2
+
+    def eod(self):
+        return{"id":self.idd, "température":self.t1}

@@ -13,3 +13,12 @@ class DoneForm(ModelForm):
             'piece': _('Piece'),
             'emplacement': _('Emplacement'),
         }
+
+class stampForm(ModelForm):
+    class Meta:
+        model = models.stamp
+        fields = ('idd', 't1')
+        labels = {
+            'idd': _("Idd"),
+            't1': _('t1'),
+        }

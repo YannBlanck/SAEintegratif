@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views, viewsdeux
 
 
 urlpatterns = [
@@ -12,5 +12,13 @@ urlpatterns = [
     path('update/<int:id>/', views.update),
     path('updatetraitement/<int:id>/', views.updatetraitement),
     path('delete/<int:id>/', views.delete),
+    #
+    path('appindex/', viewsdeux.appindex),
+    path('appajout/', viewsdeux.appajout),
+    path('apptraitement/', viewsdeux.apptraitement),
+    path('appaffiche/<int:id>/', viewsdeux.appaffiche),
+    path('appupdate/<int:id>/', viewsdeux.appupdate),
+    path('appupdatetraitement/<int:id>/', viewsdeux.appupdatetraitement),
+    path('appdelete/<int:id>/', viewsdeux.appdelete),
 
 ]
